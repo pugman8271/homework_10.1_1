@@ -7,7 +7,8 @@ def mask_account_card(full_cart_name: Union[str]) -> str:
         return f"{full_cart_name[:4]} **{full_cart_name[-4:]}"
     else:
 
-        return f"{full_cart_name[:-17]} {full_cart_name[-16:-12]} {full_cart_name[-12:-10]}** **** {full_cart_name[-4:]}"
+        return (f"{full_cart_name[:-17]} {full_cart_name[-16:-12]} "
+                f"{full_cart_name[-12:-10]}** **** {full_cart_name[-4:]}")
 
 
 def get_date(date_str: Union[str]) -> str:
