@@ -13,3 +13,5 @@ def mask_account_card(full_cart_name: Union[str]) -> str:
 
 def get_date(date_str: Union[str]) -> str:
     return f"{date_str[8:10]}.{date_str[5:7]}.{date_str[:4]}"
+
+
