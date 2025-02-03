@@ -11,6 +11,7 @@ def filter_by_state(dicts_list: Union[list]) -> list:
 
 
 
-def sort_by_date(dicts_list: Union[list], reverse=True) -> list:
-    return sorted(dicts_list, key=lambda x: x['date'], reverse=reverse)
+def sort_by_date(dicts_list: Union[list]) -> list:
+    return sorted(dicts_list, key=lambda x: x['date'], reverse=True)
+
 
