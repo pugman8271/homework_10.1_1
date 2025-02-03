@@ -2,16 +2,14 @@ from typing import Union
 
 
 def filter_by_state(dicts_list: Union[list]) -> list:
+    """Функция сортирует список словарей по 'state'"""
     filtered_list = []
     for dict_i in dicts_list:
-        if dict_i['state'] == 'EXECUTED':
+        if dict_i["state"] == "EXECUTED":
             filtered_list.append(dict_i)
     return filtered_list
 
 
-
-
 def sort_by_date(dicts_list: Union[list]) -> list:
-    return sorted(dicts_list, key=lambda x: x['date'], reverse=True)
-
-
+    """Функция сортирует список словарей по дате"""
+    return sorted(dicts_list, key=lambda x: x["date"], reverse=True)
