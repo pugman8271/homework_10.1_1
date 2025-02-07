@@ -1,6 +1,6 @@
-import pytest
-from src.widget import get_date
 
+
+from src.widget import get_date
 
 
 def test_get_data_normal(data_test):
