@@ -17,6 +17,5 @@ def test_mask_account_card():
         ("MasterCard 7158300734726758", "MasterCard 7158 30** **** 6758"),
     ],
 )
-def test_mask_account_card(value, expect):
-
+def test_mask_card_number(value, expect, card_data):
     assert mask_account_card(value) == expect
