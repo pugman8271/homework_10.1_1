@@ -15,4 +15,12 @@ def mask_account_card(full_cart_name: Union[str]) -> str:
 
 def get_date(date_str: Union[str]) -> str:
     """Функция конвертирует дату"""
-    return f"{date_str[8:10]}.{date_str[5:7]}.{date_str[:4]}"
+    data_day = date_str[8:10]
+    data_month = date_str[5:7]
+    data_year = date_str[:4]
+    if data_day.isdigit() and data_month.isdigit() and data_year.isdigit():
+
+        if 1 <= int(data_month) <= 12 and int(data_day) < 31:
+            return f"{date_str[8:10]}.{date_str[5:7]}.{date_str[:4]}"
+    else:
+        return 'Дата введена некорректно, введите в формате: ДД.ММ.ГГГГ'
