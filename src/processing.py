@@ -1,7 +1,7 @@
 from typing import Union
 
 
-def filter_by_state(dicts_list: Union[list], status_sorting="EXECUTED") -> list:
+def filter_by_state(dicts_list: Union[list], status_sorting: str="EXECUTED") -> list:
     """Функция сортирует список словарей по необязательному параметру 'state',
     она принимает на вход список 'dicts_list', на выходе получаем отсортированный список
     """

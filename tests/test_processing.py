@@ -1,8 +1,9 @@
 import pytest
-from src.processing import filter_by_state
+
+from src.processing import filter_by_state, sort_by_date
 
 
-def test_filter_by_state_non_status(test_filter_by_state_non):
+def test_filter_by_state_non_status(test_filter_by_state_non: str) -> None:
     assert (
         filter_by_state(
             [
@@ -32,7 +33,7 @@ def test_filter_by_state_non_status(test_filter_by_state_non):
     )
 
 
-def test_filter_by_state_by_status(test_filter_by_state_canceled):
+def test_filter_by_state_by_status(test_filter_by_state_canceled: str) -> None:
     assert (
         filter_by_state(
             [
@@ -144,15 +145,11 @@ def test_filter_by_state_by_status(test_filter_by_state_canceled):
         ),
     ],
 )
-def test_filter_by_state_parametrize(value, status, expected):
+def test_filter_by_state_parametrize(value: list, status: str, expected: str) -> None:
     assert filter_by_state(value, status) == expected
 
 
-
-from src.processing import sort_by_date
-
-
-def test_sort_by_date(date):
+def test_sort_by_date(date: list) -> None:
     expected = [
         {"id": 41428829, "state": "EXECUTED", "date": "2019-07-03T18:35:29.512364"},
         {"id": 615064591, "state": "CANCELED", "date": "2018-10-14T08:21:33.419441"},
@@ -163,7 +160,7 @@ def test_sort_by_date(date):
     assert result == expected
 
 
-def test_sort_by_date_similar(date_similar):
+def test_sort_by_date_similar(date_similar: list) -> None:
     expected = [
         {"id": 594226727, "state": "CANCELED", "date": "2019-07-03T21:27:25.241689"},
         {"id": 41428829, "state": "EXECUTED", "date": "2019-07-03T18:35:29.512364"},
@@ -174,7 +171,7 @@ def test_sort_by_date_similar(date_similar):
     assert result == expected
 
 
-def test_sort_by_date_revers(date_revers):
+def test_sort_by_date_revers(date_revers: list) -> None:
     expected = [
         {"id": 41428829, "state": "EXECUTED", "date": "2019-07-03T18:35:29.512364"},
         {"id": 615064591, "state": "CANCELED", "date": "2018-10-14T08:21:33.419441"},
@@ -185,7 +182,7 @@ def test_sort_by_date_revers(date_revers):
     assert result == expected
 
 
-def test_sort_by_date_non_standart(non_standart):
+def test_sort_by_date_non_standart(non_standart: list) -> None:
     expected = [
         {"id": 41428829, "state": "EXECUTED", "date": "2019/07/03"},
         {"id": 615064591, "state": "CANCELED", "date": "2018/10/14"},

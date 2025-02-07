@@ -1,22 +1,19 @@
-from src.widget import get_date
+import pytest
+
+from src.widget import get_date, mask_account_card
 
 
-def test_get_data_normal(data_test):
+def test_get_data_normal(data_test: str) -> None:
     assert get_date("2024-03-11T02:26:18.671407") == data_test
 
 
-def test_get_data_non_normal(data_test_non_standart):
+def test_get_data_non_normal(data_test_non_standart: str) -> None:
     assert get_date("дата - 11.03.2024") == data_test_non_standart
 
 
-import pytest
-
-from src.widget import mask_account_card
-
-
-def test_mask_account_card():
+def test_mask_account_card() -> None:
     with pytest.raises(TypeError):
-        mask_account_card()
+        mask_account_card(full_cart_name="some_value")
 
 
 @pytest.mark.parametrize(
@@ -28,5 +25,5 @@ def test_mask_account_card():
         ("MasterCard 7158300734726758", "MasterCard 7158 30** **** 6758"),
     ],
 )
-def test_mask_card_number(value, expect, card_data):
+def test_mask_card_number(value: str, expect: str, card_data: str) -> None:
     assert mask_account_card(value) == expect
