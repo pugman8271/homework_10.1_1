@@ -9,9 +9,11 @@ def mask_account_card(full_cart_name: Union[str]) -> str:
         return f'Счет {masks.get_mask_account(full_cart_name[-20:])}'
     else:
         if len(full_cart_name.split()) == 3:
-            return f"{full_cart_name.split()[-3]} {full_cart_name.split()[-2]} {masks.get_mask_card_number(full_cart_name.split()[-1])}"
+            return (f"{full_cart_name.split()[-3]} {full_cart_name.split()[-2]} "
+                    f"{masks.get_mask_card_number(full_cart_name.split()[-1])}")
         else:
             return f"{full_cart_name.split()[-2]} {masks.get_mask_card_number(full_cart_name.split()[-1])}"
+
 
 def get_date(date_str: str) -> str:
     """Функция конвертирует дату"""

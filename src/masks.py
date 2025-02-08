@@ -11,6 +11,7 @@ def get_mask_card_number(full_cart_num: Union[str]) -> str:
     else:
         return 'Введен некорректный номер карты'
 
+
 def get_mask_account(mask_account: Union[str]) -> str:
     """Функция скрывает часть символов номера счета"""
 
