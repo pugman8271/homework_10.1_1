@@ -15,6 +15,10 @@ git clone https://github.com/pugman8271/homework_10.1_1.git
 ```
 pip install -r requirements.txt
 ```
+3. Тестирование проекта:
+```
+pytest .\tests\  
+```
 ## Использование:
 
 1. Откройте pycharm.
