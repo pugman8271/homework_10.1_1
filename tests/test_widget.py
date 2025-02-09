@@ -13,7 +13,7 @@ def test_get_data_non_normal(data_test_non_standart: str) -> None:
 
 def test_mask_account_card() -> None:
     with pytest.raises(TypeError):
-        mask_account_card(full_cart_name="some_value")
+        mask_account_card()
 
 
 @pytest.mark.parametrize(

@@ -19,7 +19,7 @@ def test_get_mask_card_numbers_space(numbers_space: str) -> None:
     assert get_mask_card_number("70007922 8960") == numbers_space
 
     with pytest.raises(TypeError):
-        get_mask_card_number(full_cart_num="some_value")
+        get_mask_card_number()
 
 
 def test_get_mask_account(mask_account: str) -> None:
@@ -38,4 +38,4 @@ def test_get_mask_account_letter(mask_account_letter: str) -> None:
     assert get_mask_account("73654146sasdw") == mask_account_letter
 
     with pytest.raises(TypeError):
-        get_mask_account(mask_account="some_value")
+        get_mask_account()
