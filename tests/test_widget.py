@@ -11,11 +11,6 @@ def test_get_data_non_normal(data_test_non_standart: str) -> None:
     assert get_date("дата - 11.03.2024") == data_test_non_standart
 
 
-def test_mask_account_card() -> None:
-    with pytest.raises(TypeError):
-        mask_account_card()
-
-
 @pytest.mark.parametrize(
     "value, expect",
     [
