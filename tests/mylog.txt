@@ -1,0 +1,85 @@
+func TypeError ((2, '3'), {})
+func TypeError ((2, '3'), {})
+func TypeError ((2, '3'), {})
+func TypeError ((2, '3'), {})
+func TypeError ((2, '3'), {})
+func TypeError ((2, '3'), {})
+foo TypeError ((2, '3'), {})
+foo TypeError ((2, 's'), {})
+foo TypeError ((2, 's'), {})
+foo TypeError ((2, 's'), {})
+foo TypeError ((2, 's'), {})
+foo TypeError ((2, 's'), {})
+foo TypeError ((2, 's'), {}) asdsa
+my_function TypeError ((2, 's'), {})
+my_function TypeError ((2, 's'), {})
+my_function TypeError ((2, 's'), {})
+my_function TypeError ((2, 's'), {})
+my_function TypeError ((2, 's'), {})
+my_function TypeError ((2, 's'), {})
+my_function TypeError ((2, 's'), {})
+func ValueError ((), {})
+func ValueError ((), {})
+func ValueError ((), {})
+func ValueError ((), {})
+func ValueError ((), {})
+foo TypeError ((2, '5'), {})
+foo TypeError ((2, '5'), {})
+foo TypeError ((2, '5'), {})
+foo TypeError ((2, '5'), {})
+Ошибка foo TypeError ((2, '5'), {})
+Ошибка foo TypeError ((2, '5'), {})
+Ошибка foo TypeError ((2, '5'), {})
+Ошибка foo TypeError ((2, '5'), {})
+Ошибка foo TypeError ((2, '5'), {})
+Ошибка foo TypeError ((2, '5'), {})
+Ошибка foo TypeError ((2, '5'), {})
+Ошибка foo TypeError ((2, '5'), {})
+Ошибка foo TypeError ((2, '5'), {})
+Ошибка foo TypeError ((2, '5'), {})
+Ошибка foo TypeError ((2, '5'), {})
+Ошибка foo TypeError ((2, '5'), {})
+Ошибка foo TypeError ((2, '5'), {})
+foo ok 
+Начало работы: 2025-02-23 18:24:35.080630
+Конец работы 2025-02-23 18:24:35.080631
+Ошибка foo TypeError ((2, '5'), {})
+foo ok 
+Начало работы: 2025-02-23 18:25:32.680767
+Конец работы 2025-02-23 18:25:32.680768
+Ошибка foo TypeError ((2, '5'), {})
+foo ok 
+Начало работы: 2025-02-23 18:26:47.172727
+Конец работы 2025-02-23 18:26:47.172728
+foo ok 
+Начало работы: 2025-02-23 18:27:07.008055
+Конец работы 2025-02-23 18:27:07.008056
+foo ok 
+Начало работы: 2025-02-23 18:27:38.558647
+Конец работы 2025-02-23 18:27:38.558649
+foo ok 
+Начало работы: 2025-02-23 18:27:50.765191
+Конец работы 2025-02-23 18:27:50.765192
+foo ok 
+foo ok 
+foo ok 
+foo ok 
+foo ok 
+foo ok 
+foo ok 
+foo ok 
+foo ok 
+foo ok 
+foo ok 
+foo ok 
+foo ok 
+foo ok 
+foo ok 
+foo ok 
+foo ok
+foo ok 
+foo ok 
+foo ok 
+foo ok 
+foo ok 
+foo ok 
