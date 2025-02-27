@@ -15,16 +15,16 @@ def convert_transaction(transaction):
         currency_to = 'RUB'
         currency_from = transaction['operationAmount']['currency']['code']
         amount = float(transaction['operationAmount']['amount'])
-        url =f"https://api.apilayer.com/exchangerates_data/convert?to={currency_to}&from={currency_from}&amount={amount}"
+        url = (f"https://api.apilayer.com/exchangerates_data/convert?to="
+               f"{currency_to}&from={currency_from}&amount={amount}")
         payload = {}
         headers = {
             "apikey": API_KEY_apilayer
         }
         response = requests.request("GET", url, headers=headers, data=payload)
-        status_code = response.status_code
         result = response
         return f'{json.loads(result.text)['query']['amount']} RUB'
-    except:
+    except Exception:
         return 'Что-то пошло не так'
 
 
@@ -43,6 +43,3 @@ print((convert_transaction({
     "from": "Maestro 1596837868705199",
     "to": "Счет 64686473678894779589"
 })))
-
-
-
