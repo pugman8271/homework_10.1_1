@@ -1,9 +1,10 @@
+import pytest
+
 from generators.generator import (
+    card_number_generator,
     filter_by_currency,
     transaction_descriptions,
-    card_number_generator,
 )
-import pytest
 
 
 def test_filter_by_currency(transactions):
