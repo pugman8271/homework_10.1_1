@@ -9,6 +9,3 @@ def test_operations_json_get_info_incorrect(transactions_json):
     assert operations_json_get_info("") == []
     assert operations_json_get_info("///") == []
     assert operations_json_get_info(".data.operations.json") == []
-
-
-print(operations_json_get_info("/tests/operations_tests.json"))
