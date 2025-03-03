@@ -16,8 +16,8 @@ def operations_json_get_info(directory):
             logger.info(f"Успешно открыт файл, расположенный по пути: {directory}")
             return json.load(f)
     except FileNotFoundError:
-        logger.error(f"Ошибка: FileNotFoundError, пусть к файлу: {directory}")
+        logger.error(f"Ошибка: FileNotFoundError, путь к файлу: {directory}")
         return "файл не найден"
     except json.JSONDecodeError:
-        logger.error(f"Ошибка: json.JSONDecodeError, пусть к файлу: {directory}")
+        logger.error(f"Ошибка: json.JSONDecodeError, путь к файлу: {directory}")
         return []
