@@ -23,6 +23,6 @@ def convert_transaction(transaction):
         payload = {}
         headers = {"apikey": API_KEY_apilayer}
         response = requests.get(url, headers=headers, data=payload)
-        return response.json()["result"]
+        return float(response.json()["result"])
     except Exception:
         return "Что-то пошло не так"

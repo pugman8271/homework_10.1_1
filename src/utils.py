@@ -6,5 +6,8 @@ def operations_json_get_info(directory):
     try:
         with open(directory, encoding="utf-8") as f:
             return json.load(f)
-    except Exception:
+    except FileNotFoundError:
+        return 'файл не найден'
+    except json.JSONDecodeError:
         return []
+

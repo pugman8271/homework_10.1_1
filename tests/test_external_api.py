@@ -13,7 +13,7 @@ API_KEY_apilayer = os.getenv("API_KEY_apilayer")
 
 @patch("requests.get")
 def test_convert_transaction(mock_get):
-    mock_get.return_value.json.return_value = {"success": True, "result": "result_test"}
+    mock_get.return_value.json.return_value = {"success": True, "result": 200}
     assert (
         convert_transaction(
             {
@@ -29,7 +29,7 @@ def test_convert_transaction(mock_get):
                 "to": "Счет 64686473678894779589",
             }
         )
-        == "result_test"
+        == 200
     )
     mock_get.assert_called_once_with(
         "https://api.apilayer.com/exchangerates_data/convert?to=rub&from=usd&amount=test_amount",
