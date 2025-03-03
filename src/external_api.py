@@ -1,6 +1,8 @@
 import os
+
 import requests
 from dotenv import load_dotenv
+
 from src import utils
 
 load_dotenv(".env")
