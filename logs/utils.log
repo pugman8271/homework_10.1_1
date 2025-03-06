@@ -1,0 +1,9 @@
+2025-03-03 18:30:00,113 - utils - ERROR: Ошибка: FileNotFoundError, путь к файлу: /data/operations.json
+2025-03-03 18:30:00,154 - utils - INFO: Успешно открыт файл, расположенный по пути: data/operations.json
+2025-03-03 18:30:00,156 - utils - ERROR: Ошибка: FileNotFoundError, путь к файлу: 
+2025-03-03 18:30:00,156 - utils - ERROR: Ошибка: FileNotFoundError, путь к файлу: ///
+2025-03-03 18:30:00,156 - utils - ERROR: Ошибка: FileNotFoundError, путь к файлу: .data.operations.json
+2025-03-03 18:30:00,156 - utils - INFO: Успешно открыт файл, расположенный по пути: 1
+2025-03-03 18:30:00,156 - utils - ERROR: Ошибка: json.JSONDecodeError, путь к файлу: 1
+2025-03-03 18:30:00,158 - utils - INFO: Успешно открыт файл, расположенный по пути: tests/operations_test_empty.json
+2025-03-03 18:30:00,158 - utils - ERROR: Ошибка: json.JSONDecodeError, путь к файлу: tests/operations_test_empty.json
