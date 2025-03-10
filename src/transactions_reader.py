@@ -15,7 +15,3 @@ def  transactions_reader_xlsx(directory):
 
 
 
-
-print(transactions_reader_csv('../transactions.csv'))
-
-print(transactions_reader_xlsx('../transactions_excel.xlsx'))
