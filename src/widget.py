@@ -5,16 +5,19 @@ from src import masks
 
 def mask_account_card(full_cart_name: Union[str]) -> str:
     """Функция скрывает часть символов номера карты/счета"""
-    if "Счет" in full_cart_name:
-        return f"Счет {masks.get_mask_account(full_cart_name[-20:])}"
-    else:
-        if len(full_cart_name.split()) == 3:
-            return (
-                f"{full_cart_name.split()[-3]} {full_cart_name.split()[-2]} "
-                f"{masks.get_mask_card_number(full_cart_name.split()[-1])}"
-            )
+    try:
+        if "Счет" in full_cart_name:
+            return f"Счет {masks.get_mask_account(full_cart_name[-20:])}"
         else:
-            return f"{full_cart_name.split()[-2]} {masks.get_mask_card_number(full_cart_name.split()[-1])}"
+            if len(full_cart_name.split()) == 3:
+                return (
+                    f"{full_cart_name.split()[-3]} {full_cart_name.split()[-2]} "
+                    f"{masks.get_mask_card_number(full_cart_name.split()[-1])}"
+                )
+            else:
+                return f"{full_cart_name.split()[-2]} {masks.get_mask_card_number(full_cart_name.split()[-1])}"
+    except IndexError:
+        "Ошибка индекса"
 
 
 def get_date(date_str: str) -> str:
