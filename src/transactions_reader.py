@@ -14,5 +14,3 @@ def transactions_reader_xlsx(directory):
     """Функция чтения excel файлов"""
     reader_xlsx = pd.read_excel(directory)
     return reader_xlsx.to_dict(orient="records")
-
-
