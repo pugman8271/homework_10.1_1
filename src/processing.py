@@ -42,7 +42,7 @@ def sort_by_currency(dicts_list, currency="RUB"):
         for dict_i in dicts_list:
             if dict_i["operationAmount"]["currency"]["code"] == currency:
                 filtered_list.append(dict_i)
-    except ImportError:
+    except IndexError:
         filtered_list = []
         for dict_i in dicts_list:
             if dict_i["currency_code"] == currency:
