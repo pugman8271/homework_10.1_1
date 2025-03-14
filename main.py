@@ -123,6 +123,7 @@ def main() -> None:
                 if "amount" in operation:
                     print((operation["amount"]), (operation["currency_code"]))
                     print("********************************************")
+        break
 
 
 main()
